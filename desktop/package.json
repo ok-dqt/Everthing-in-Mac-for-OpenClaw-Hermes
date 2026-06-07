@@ -1,0 +1,41 @@
+{
+  "name": "hermes-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://127.0.0.1:1422 && electron .\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron:build": "electron-builder"
+  },
+  "dependencies": {
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.17.0",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "concurrently": "^9.1.2",
+    "electron": "^35.1.5",
+    "tailwindcss": "^4.1.8",
+    "tsx": "^4.22.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.4.2",
+    "wait-on": "^8.0.3"
+  },
+  "main": "electron/main.mjs",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  }
+}
